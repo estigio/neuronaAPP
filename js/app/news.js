@@ -31,7 +31,7 @@ function listNews() {
 	}).done( function (data){
 		
 		$.each( data, function ( i, item ){
-			content  += '<li                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                class="nw"><a href="#id'+item['id']+'" >'+
+			content  += '<li  ><a href="#id'+item['id']+'" class="nw">'+
                             "<img src=\""+SourceImagen+"news/"+item['img']+"\">"+
                         "<h2>"+item['title']+"</h2>"+
                         "<p>"+item["description"].substring(0, 30)+"</p></a>"+
@@ -45,17 +45,21 @@ function listNews() {
 }
 
 function cargarNoticia (id) {
+	$.mobile.loading( "show");
+	$.mobile.navigate( "#newsstory" );
 	$.ajax({
 		url: API_SOURCE+"news?id="+id,
 		async: true,
 		format:"jsonp"
 	}).done(function (data){
 		$.each( data, function ( i, item ){
-				$("#title").html(item['titulo']);
-				$("#image").attr("src",SourceImagen+item['pic']);
-				$("#description").html(item.Descripcion);
-		});
+				$("#title").html(item['title']);
+				$("#image").attr("src",SourceImagen+"news/"+item['img']);
+				$("#description").html(item['description']);
 
+		});
+		
+		$.mobile.loading( "hide");
 	});
 }
 
