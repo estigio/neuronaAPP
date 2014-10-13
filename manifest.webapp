@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "Neurona App",
+  "launch_path": "/index.html",
+  "description": "Aplicacion del grupo creativo neurona",
+  "icons": {
+    "60": "/img/touch/touch-icon-60x60.png",
+    "128": "/img/touch/touch-icon-128x128.png"
+  },
+  "developer": {
+    "name": "estigioportal",
+    "url": "estigioportal.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "es",
+  "permissions": {
+  },
+  "locales": {
+    "es": {
+      "name": "Neurona",
+      "description": "Aplicación grupo Creativo Neurona."
+    }
+  }
+}

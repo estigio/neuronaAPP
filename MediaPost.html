@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">        
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->        
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>        
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.4.css">
+       <!-- <link rel="stylesheet" href="css/main.css">-->
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+        <style type="text/css">
+           .custom-corners .ui-bar {
+              -webkit-border-top-left-radius: inherit;
+              border-top-left-radius: inherit;
+              -webkit-border-top-right-radius: inherit;
+              border-top-right-radius: inherit;
+            }
+            .custom-corners .ui-body {
+              border-top-width: 0;
+              -webkit-border-bottom-left-radius: inherit;
+              border-bottom-left-radius: inherit;
+              -webkit-border-bottom-right-radius: inherit;
+              border-bottom-right-radius: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="listMedia" data-role="page" style="background:#bed730; margin:0px;">
+                <header data-role="header" data-position="fixed" style="text-align:center;">
+                    <a href="index.html" rel="external" style="margin-top:7px;" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back">Atras</a>
+              <img src="img/logo/logo.png"  style="width:50px;">   
+            </header><!-- /header -->
+                 <article role="main" class="ui-content" style="background:#bed730; text-align:center;">
+                    <h2>Categoria</h2>                    
+                  <ul data-role="listview">
+                        <li style="padding-top:5px;"><a href="#mediaStory" >
+                            <img src="http://img.youtube.com/vi/SQnBSeDVyYk/0.jpg" style="margin-top:5px;">
+                        <h2>NOTICIA 1 con titulo largo</h2>
+                        <p>Broken Bells</p></a>
+                        </li>
+                        <li style="padding-top:5px;"><a href="#mediaStory" >
+                            <img src="http://img.youtube.com/vi/tRg80d-wrZ8/0.jpg" style="margin-top:5px;">
+                        <h2>NOTICIA 2</h2>
+                        <p>Hot Chip</p></a>
+                        </li>
+                        <li style="padding-top:5px;"><a href="#mediaStory" >
+                            <img src="http://img.youtube.com/vi/JQUIT0ZR-wk/0.jpg" style="margin-top:5px;">
+                        <h2>NOTICIA 3</h2>
+                        <p>Phoenix</p></a>
+                        </li>
+                    </ul>
+                 </article><!-- /content -->
+                 <footer data-role="footer" data-position="fixed">
+                     <h1 style="color:white; text-shadow: 0px 0px ; font-weight: normal;">grupocreativoneurona.co</h1>
+                 </footer><!-- /footer -->
+             </section><!-- /page -->     
+       
+
+
+
+            <section id="mediaStory" data-role="page" style="background:#bed730; text-align:center;">
+                 <header data-role="header" data-position="fixed" style="text-align:center;">
+                    <a href="MediaPost.html" rel="external" style="margin-top:7px;" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back">Atras</a>
+                    <img src="img/logo/logo.png"  style="width:50px;">   
+                </header><!-- /header -->
+                <article role="main" class="ui-content" style="background:#bed730; text-align:center;">
+                    
+                   <div class="ui-corner-all custom-corners">
+                      <div class="ui-bar ui-bar-a" >
+                        <h3 style="color:white; text-shadow: 0px 0px ; font-weight: normal;">
+                            Heading
+                        </h3>
+                      </div>
+                      <div class="ui-body ui-body-a">
+                        <p>
+                            <iframe width="100%" height="215" src="http://www.youtube.com/embed/SQnBSeDVyYk?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen id="myvideo"></iframe>
+                            <hr>
+                            Descripcion del video
+                        </p>
+                      </div>
+                    </div>
+                </article><!-- /content -->
+                <footer data-role="footer" data-position="fixed">
+                     <h1  style="color:white; text-shadow: 0px 0px ; font-weight: normal;">
+                         grupocreativoneurona.co 
+                    </h1>
+                 </footer><!-- /footer -->
+            </section><!-- /page -->
+
+        <script src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery.mobile-1.4.4.js"></script>    
+    </body>
+</html>
