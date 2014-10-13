@@ -46,7 +46,7 @@ function listNews() {
 
 function cargarNoticia (id) {
 	$.mobile.loading( "show");
-	$.mobile.navigate( "#newsstory" );
+	$.mobile.navigate( "#newsstory",{transition: "slide"} );
 	$.ajax({
 		url: API_SOURCE+"news?id="+id,
 		async: true,
