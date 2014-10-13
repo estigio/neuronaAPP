@@ -50,25 +50,9 @@
                     <a href="index.html" rel="external" style="margin-top:7px;" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back">Atras</a>
               <img src="img/logo/logo.png"  style="width:50px;">   
             </header><!-- /header -->
-                 <article role="main" class="ui-content" style="background:#bed730; text-align:center;">
-                    <h2>Categoria</h2>                    
-                  <ul data-role="listview">
-                        <li style="padding-top:5px;"><a href="#mediaStory" >
-                            <img src="http://img.youtube.com/vi/SQnBSeDVyYk/0.jpg" style="margin-top:5px;">
-                        <h2>NOTICIA 1 con titulo largo</h2>
-                        <p>Broken Bells</p></a>
-                        </li>
-                        <li style="padding-top:5px;"><a href="#mediaStory" >
-                            <img src="http://img.youtube.com/vi/tRg80d-wrZ8/0.jpg" style="margin-top:5px;">
-                        <h2>NOTICIA 2</h2>
-                        <p>Hot Chip</p></a>
-                        </li>
-                        <li style="padding-top:5px;"><a href="#mediaStory" >
-                            <img src="http://img.youtube.com/vi/JQUIT0ZR-wk/0.jpg" style="margin-top:5px;">
-                        <h2>NOTICIA 3</h2>
-                        <p>Phoenix</p></a>
-                        </li>
-                    </ul>
+                 <article role="main" class="ui-content" style="background:#bed730; text-align:center;">                
+                  <ul data-role="listview" id="listMedias">                        
+                  </ul>
                  </article><!-- /content -->
                  <footer data-role="footer" data-position="fixed">
                      <h1 style="color:white; text-shadow: 0px 0px ; font-weight: normal;">grupocreativoneurona.co</h1>
@@ -80,22 +64,21 @@
 
             <section id="mediaStory" data-role="page" style="background:#bed730; text-align:center;">
                  <header data-role="header" data-position="fixed" style="text-align:center;">
-                    <a href="MediaPost.html" rel="external" style="margin-top:7px;" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back">Atras</a>
+                    <a href="MediaPost.html" rel="external" style="margin-top:7px;" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back" id="btnback">Atras</a>
                     <img src="img/logo/logo.png"  style="width:50px;">   
                 </header><!-- /header -->
                 <article role="main" class="ui-content" style="background:#bed730; text-align:center;">
                     
                    <div class="ui-corner-all custom-corners">
                       <div class="ui-bar ui-bar-a" >
-                        <h3 style="color:white; text-shadow: 0px 0px ; font-weight: normal;">
-                            Heading
+                        <h3 style="color:white; text-shadow: 0px 0px ; font-weight: normal;" id="title">                  
                         </h3>
                       </div>
                       <div class="ui-body ui-body-a">
                         <p>
-                            <iframe width="100%" height="215" src="http://www.youtube.com/embed/SQnBSeDVyYk?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen id="myvideo"></iframe>
+                            <span id="media"> <img src="img/logo/logo.png"  width="100%" id="image"/></span>
                             <hr>
-                            Descripcion del video
+                            <span id="description"></span>
                         </p>
                       </div>
                     </div>
@@ -108,6 +91,20 @@
             </section><!-- /page -->
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
-        <script src="js/jquery.mobile-1.4.4.js"></script>    
+        <script src="js/jquery.mobile-1.4.4.js"></script>
+        <script src="js/app/urlVars.js"></script>    
+        <script src="js/app/media.js"></script>
+        <script>
+          $(document).on('ready',function(){
+              var  id = getUrlVars();  
+              $("#btnback").attr('href','MediaPost.html?id='+id['id']);           
+              getGenericList(id['id']);
+
+              $(document).on('click',".nw",function(){
+                     var id= $(this).attr('href').replace("#id","");
+                     getMediapost(id);
+                });
+          });
+        </script>
     </body>
 </html>
