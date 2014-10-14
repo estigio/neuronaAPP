@@ -5,8 +5,8 @@
  * Contact: wfrancootero@gmail.coom | about.me/walthersmith
  */
 
-var API_SOURCE ="http://192.168.1.4:81/ApiNeurona/api/";
-var SourceImagen = "http://192.168.1.4:81/ApiNeurona/files/"
+var API_SOURCE ="http://api.grupocreativoneurona.co/api/";
+var SourceImagen = "http://api.grupocreativoneurona.co/files/"
 
 $.support.cors = true;
 $.mobile.allowCrossDomainPages = true;
