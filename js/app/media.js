@@ -6,7 +6,7 @@
  */
 
 var API_SOURCE ="http://api.grupocreativoneurona.co/api/";
-var SourceImagen = "http://api.grupocreativoneurona.co/files/"
+var SourceImagen = "http://api.grupocreativoneurona.co/files/";
 
 $.support.cors = true;
 $.mobile.allowCrossDomainPages = true;
